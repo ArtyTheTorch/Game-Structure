@@ -24,7 +24,6 @@ namespace GameStructure
             //GetInput
             //Process
             //Render  
-            System.Console.WriteLine("Loop");
         }
     }
 }

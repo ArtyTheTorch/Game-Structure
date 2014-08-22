@@ -7,3 +7,4 @@ C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.csproj.GenerateResource.Cache
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.exe
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.pdb
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.Form1.resources

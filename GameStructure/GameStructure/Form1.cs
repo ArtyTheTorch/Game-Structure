@@ -12,9 +12,16 @@ namespace GameStructure
 {
     public partial class Form1 : Form
     {
+        //bool _fullscreen = true;
         public Form1()
         {
             InitializeComponent();
+            _openGLControl.InitializeContexts();
+            //if (_fullscreen)
+            //{
+            //    FormBorderStyle = FormBorderStyle.None;
+            //    WindowState = FormWindowState.Maximized;
+            //}
         }
     }
 }
