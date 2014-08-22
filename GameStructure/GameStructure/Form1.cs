@@ -35,7 +35,7 @@ namespace GameStructure
             Gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
             //Rotate the shape?
-            Gl.glRotated(100 * elapsedTime, .5, 1,-.5);
+            Gl.glRotated(10 * elapsedTime, 0.0, 1,0.0);
             //Triangle with colors
             Gl.glBegin(Gl.GL_TRIANGLES);
             {
@@ -46,14 +46,14 @@ namespace GameStructure
                 Gl.glColor3d(0.0, 0.0, 1.0);
                 Gl.glVertex3d(0, 0.5, 0);//Point
 
-                Gl.glColor3d(1.0, 0.0, 1.0);
-                Gl.glVertex3d(0,-.5, 0.0);//Point I added
+                //Gl.glColor3d(1.0, 0.0, 1.0);
+                //Gl.glVertex3d(0,-.5, 0.0);//Point I added
 
-                Gl.glColor3d(1.0,1.0,0.0);
-                Gl.glVertex3d(0, 0, .5);//Point I added
+                //Gl.glColor3d(1.0,1.0,0.0);
+                //Gl.glVertex3d(0, 0, .5);//Point I added
 
-                Gl.glColor3d(0.0, 1.0, 1.0);
-                Gl.glVertex3d(0, 0, -.5);//Point I added
+                //Gl.glColor3d(0.0, 1.0, 1.0);
+                //Gl.glVertex3d(0, 0, -.5);//Point I added
             }
             Gl.glEnd();
             Gl.glFinish();
