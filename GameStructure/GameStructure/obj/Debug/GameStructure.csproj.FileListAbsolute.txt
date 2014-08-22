@@ -1,1 +1,9 @@
 C:\Users\GARRET\Documents\GitHub\GameStructure\GameStructure\bin\Debug\GameStructure.exe.config
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\bin\Debug\GameStructure.exe.config
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\bin\Debug\GameStructure.exe
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\bin\Debug\GameStructure.pdb
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.csprojResolveAssemblyReference.cache
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.Properties.Resources.resources
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.csproj.GenerateResource.Cache
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.exe
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.pdb
