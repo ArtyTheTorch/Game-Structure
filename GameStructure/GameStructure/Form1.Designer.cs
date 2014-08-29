@@ -31,7 +31,7 @@
             this._openGLControl = new Tao.Platform.Windows.SimpleOpenGlControl();
             this.SuspendLayout();
             // 
-            // simpleOpenGlControl1
+            // _openGLControl
             // 
             this._openGLControl.AccumBits = ((byte)(0));
             this._openGLControl.AutoCheckErrors = false;
@@ -43,8 +43,8 @@
             this._openGLControl.DepthBits = ((byte)(16));
             this._openGLControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this._openGLControl.Location = new System.Drawing.Point(0, 0);
-            this._openGLControl.Name = "simpleOpenGlControl1";
-            this._openGLControl.Size = new System.Drawing.Size(284, 262);
+            this._openGLControl.Name = "_openGLControl";
+            this._openGLControl.Size = new System.Drawing.Size(800, 600);
             this._openGLControl.StencilBits = ((byte)(0));
             this._openGLControl.TabIndex = 0;
             // 
@@ -52,11 +52,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(800,600);
             this.Controls.Add(this._openGLControl);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+
 
         }
 
