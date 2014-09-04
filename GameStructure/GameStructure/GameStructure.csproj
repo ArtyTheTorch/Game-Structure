@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawSpriteState.cs" />
     <Compile Include="FastLoop.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -115,6 +116,7 @@
     <Compile Include="SplashScreenState.cs" />
     <Compile Include="StateSystem.cs" />
     <Compile Include="Test_StateSystem.cs" />
+    <Compile Include="TextureManager.cs" />
     <Compile Include="TitleMenuState.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tao.OpenGl;
-
+using Tao.DevIl;
 
 
 namespace GameStructure
@@ -21,18 +21,34 @@ namespace GameStructure
 
         StateSystem _system = new StateSystem();
 
+        TextureManager _textureManager = new TextureManager();
+
         public Form1()
         {
+            InitializeComponent();
+            _openGLControl.InitializeContexts();
+
+            //Init DevIl
+            Il.ilInit();
+            Ilu.iluInit();
+            Ilut.ilutInit();
+            Ilut.ilutRenderer(Ilut.ILUT_OPENGL);
+
+            //Load Textures
+            _textureManager.LoadTexture("face","face.tif");
+
             // Add all the states that will be used.
             _system.AddState("splash", new SplashScreenState(_system));
             _system.AddState("title_menu", new TitleMenuState());
+            _system.AddState("sprite_test", new DrawSpriteState(_textureManager));
 
             // Select the start state
-            _system.ChangeState("splash");
+            //Use this line when making a "Normal" Game _system.ChangeState("splash"); 
+            _system.ChangeState("sprite_test");
+
+          
 
 
-            InitializeComponent();
-            _openGLControl.InitializeContexts();
             if (_fullscreen)
             {
                 FormBorderStyle = FormBorderStyle.None;
