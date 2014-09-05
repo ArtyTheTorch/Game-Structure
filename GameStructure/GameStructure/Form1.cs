@@ -36,15 +36,17 @@ namespace GameStructure
 
             //Load Textures
             _textureManager.LoadTexture("face","face.tif");
+            _textureManager.LoadTexture("face_alpha", "face_alpha.tif");
 
             // Add all the states that will be used.
             _system.AddState("splash", new SplashScreenState(_system));
             _system.AddState("title_menu", new TitleMenuState());
             _system.AddState("sprite_test", new DrawSpriteState(_textureManager));
+            _system.AddState("test_sprite_class_state", new TestSpriteClassState(_textureManager));
 
             // Select the start state
             //Use this line when making a "Normal" Game _system.ChangeState("splash"); 
-            _system.ChangeState("sprite_test");
+            _system.ChangeState("test_sprite_class_state");
 
           
 

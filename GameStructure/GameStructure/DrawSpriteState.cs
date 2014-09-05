@@ -22,13 +22,13 @@ namespace GameStructure
         { }
         public void Render()
         {
-            Texture texture = _textureManager.Get("face");
+            Texture texture = _textureManager.Get("face_alpha");
             //Gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             //Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
             Gl.glEnable(Gl.GL_TEXTURE_2D);
             Gl.glBindTexture(Gl.GL_TEXTURE_2D, texture.Id);
-
-            Gl.glBegin(Gl.GL_TRIANGLES);
+            Gl.glEnable(Gl.GL_BLEND);
+            Gl.glBlendFunc(Gl.GL_SRC_ALPHA, Gl.GL_ONE_MINUS_SRC_ALPHA);
 
             //Variables used for the dimensions of the sprite
             double height = 200;
@@ -47,7 +47,17 @@ namespace GameStructure
             float leftUV = 0;
             float rightUV = 1;
 
+            //Colors for the sprite
+            float red = 1;
+            float green = 0;
+            float blue = 0;
+            float alpha = 0.01f;
+            
+            Gl.glBegin(Gl.GL_TRIANGLES);
             {
+                //Color the sprite
+                Gl.glColor4f(red,green,blue,alpha);
+
                 //Top Half of Triangle
                 Gl.glTexCoord2d(leftUV, topUV);
                 Gl.glVertex3d(x - halfWidth, y + halfHeight, z); //Top Left
