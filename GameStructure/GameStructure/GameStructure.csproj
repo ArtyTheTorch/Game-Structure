@@ -133,6 +133,7 @@
     <Compile Include="TextureManager.cs" />
     <Compile Include="TitleMenuState.cs" />
     <Compile Include="Vector.cs" />
+    <Compile Include="WaveformGraphState.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
