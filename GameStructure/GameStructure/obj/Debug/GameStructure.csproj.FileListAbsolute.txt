@@ -9,3 +9,4 @@ C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.Form1.resources
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\bin\Debug\nunit.framework.dll
 C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\bin\Debug\nunit.framework.xml
+C:\Users\GARRET\Documents\GitHub\Game-Structure\GameStructure\GameStructure\obj\Debug\GameStructure.csprojResolveAssemblyReference.cache
