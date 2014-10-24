@@ -48,12 +48,13 @@ namespace GameStructure
             _system.AddState("text_renderer_state", new TextRenderState(_textureManager));
             _system.AddState("FPS_test_state", new FPSTestState(_textureManager));
             _system.AddState("waveform_graph_state", new WaveformGraphState());
+            _system.AddState("special_effects_state", new SpecialEffectsState(_textureManager));
 
 
 
             // Select the start state
             //Use this line when making a "Normal" Game _system.ChangeState("splash"); 
-            _system.ChangeState("waveform_graph_state");
+            _system.ChangeState("special_effects_state");
 
           
 

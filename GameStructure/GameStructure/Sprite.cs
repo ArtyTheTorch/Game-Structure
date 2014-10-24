@@ -35,7 +35,10 @@ namespace GameStructure
                 InitVertexPositions(GetCenter(), _texture.Width, _texture.Height);
             }
         }
-
+        public Vector GetPosition()
+        {
+            return GetCenter();
+        }
         public Vector[] VertexPositions
         {
             get { return _vertexPositions; }
