@@ -43,6 +43,7 @@ namespace GameStructure
             {
                 Vector position = cs.Sprite.GetPosition();
                 position.Y = 0 + Math.Sin((_totalTime + xAdvance) * frequency) * 25;
+                position.X = Math.Cos((Math.PI / 2 * _totalTime + xAdvance) * frequency) * 25 - Math.Sin((Math.PI / 2 * _totalTime + xAdvance) * frequency) * 25;
                 cs.Sprite.SetPosition(position);
                 xAdvance++;
             }
