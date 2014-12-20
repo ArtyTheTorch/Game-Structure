@@ -16,6 +16,7 @@ namespace GameStructure
 
     public partial class Form1 : Form
     {
+        Input _input = new Input();
         FastLoop _fastLoop;
         bool _fullscreen = false;
 
@@ -35,9 +36,11 @@ namespace GameStructure
             Ilut.ilutRenderer(Ilut.ILUT_OPENGL);
 
             //Load Textures
-            _textureManager.LoadTexture("face","face.tif");
+            _textureManager.LoadTexture("face", "face.tif");
+            _textureManager.LoadTexture("font", "font.tga");
             _textureManager.LoadTexture("face_alpha", "face_alpha.tif");
-            _textureManager.LoadTexture("font","font.tga");
+
+            //_textureManager.LoadTexture("face", "face_alpha.tif");
 
             // Add all the states that will be used.
             _system.AddState("splash", new SplashScreenState(_system));
@@ -49,14 +52,15 @@ namespace GameStructure
             _system.AddState("FPS_test_state", new FPSTestState(_textureManager));
             _system.AddState("waveform_graph_state", new WaveformGraphState());
             _system.AddState("special_effects_state", new SpecialEffectsState(_textureManager));
-
-
+            _system.AddState("circle_intersection_state", new CircleIntersectionState(_input));
+            _system.AddState("rectangle_intersection_state", new RectangleIntersectionState(_input));
+            _system.AddState("tween_test_state", new TweenTestState(_textureManager));
 
             // Select the start state
             //Use this line when making a "Normal" Game _system.ChangeState("splash"); 
-            _system.ChangeState("special_effects_state");
+            _system.ChangeState("tween_test_state");
 
-          
+
 
 
             if (_fullscreen)
@@ -64,7 +68,8 @@ namespace GameStructure
                 FormBorderStyle = FormBorderStyle.None;
                 WindowState = FormWindowState.Maximized;
             }
-            else {
+            else
+            {
                 ClientSize = new Size(1280, 720);
             }
             Setup2DGraphics(ClientSize.Width, ClientSize.Height);
@@ -79,9 +84,25 @@ namespace GameStructure
             Setup2DGraphics(ClientSize.Width, ClientSize.Height);
         }
 
-        //This is the Flow for the game
-        void GameLoop(double elapsedTime)
+        //Used to take in position of the mouse
+        private void UpdateInput()
         {
+            System.Drawing.Point mousePos = Cursor.Position;
+            mousePos = _openGLControl.PointToClient(mousePos);
+
+            // Now use our point definition,
+            Point adjustedMousePoint = new Point();
+            adjustedMousePoint.X = (float)mousePos.X - ((float)ClientSize.Width
+          / 2);
+            adjustedMousePoint.Y = ((float)ClientSize.Height / 2) - (float)mousePos.Y;
+            _input.MousePosition = adjustedMousePoint;
+        }
+
+
+        //This is the Flow for the game
+        private void GameLoop(double elapsedTime)
+        {
+            UpdateInput();
             _system.Update(elapsedTime);
             _system.Render();
             _openGLControl.Refresh();
@@ -98,6 +119,6 @@ namespace GameStructure
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
         }
-        
+
     }
 }

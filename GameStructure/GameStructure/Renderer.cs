@@ -17,8 +17,7 @@ namespace GameStructure
             Gl.glBlendFunc(Gl.GL_SRC_ALPHA, Gl.GL_ONE_MINUS_SRC_ALPHA);
         }
 
-        public void DrawImmediateModeVertex(Vector position, Color color,
-   Point uvs)
+        public void DrawImmediateModeVertex(Vector position, Color color, Point uvs)
         {
             Gl.glColor4f(color.Red, color.Green, color.Blue, color.Alpha);
             Gl.glTexCoord2f(uvs.X, uvs.Y);

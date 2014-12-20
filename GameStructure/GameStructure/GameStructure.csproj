@@ -103,6 +103,8 @@
   <ItemGroup>
     <Compile Include="CharacterData.cs" />
     <Compile Include="CharacterSprite.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="CircleIntersectionState.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="DrawSpriteState.cs" />
     <Compile Include="FastLoop.cs" />
@@ -117,10 +119,13 @@
     <Compile Include="FPSTestState.cs" />
     <Compile Include="FramesPerSecond.cs" />
     <Compile Include="IGameObject.cs" />
+    <Compile Include="Input.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="PreciseTimer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="RectangleIntersectionState.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="SpecialEffectsState.cs" />
     <Compile Include="SplashScreenState.cs" />
@@ -133,6 +138,8 @@
     <Compile Include="TextTestState.cs" />
     <Compile Include="TextureManager.cs" />
     <Compile Include="TitleMenuState.cs" />
+    <Compile Include="Tween.cs" />
+    <Compile Include="TweenTestState.cs" />
     <Compile Include="Vector.cs" />
     <Compile Include="WaveformGraphState.cs" />
     <EmbeddedResource Include="Form1.resx">
